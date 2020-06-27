@@ -1,0 +1,15 @@
+.ann-card {
+    /*width: 20rem;*/
+    border: black 1px solid;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.ann-text {
+    margin-top: 1rem;
+}
+
+.sort-text{
+    text-align: center;
+}

@@ -13,6 +13,7 @@
 .toolbar-element {
     display: inline-block;
     margin: 0 1rem;
+    cursor: pointer;
 }
 
 .right-aligned {
@@ -35,10 +36,10 @@
 
 .cover-float-island{
     position: absolute;
-    bottom: 73%;
+    top: 22%;
     left: 50%;
-    transform: translate(-50%);
-    font-size: 30px;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: x-large;
 }
 
 .intro{
@@ -48,6 +49,10 @@
 .intro-box{
     height: 10rem;
     display: flex;
+}
+
+.intro-image-container {
+    flex-grow: 2;
 }
 
 .intro-image{
