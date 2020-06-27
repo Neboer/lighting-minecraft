@@ -1,0 +1,70 @@
+.toolbar-top {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+
+.bandage {
+    display: inline-block;
+    margin: 0 1rem;
+    font-size: large;
+}
+
+.toolbar-element {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.right-aligned {
+    display: inline-block;
+    float: right;
+}
+
+.toolbar-element-active {
+    font-weight: bold;
+}
+
+.cover-image-container {
+    position: relative;
+}
+
+.cover-image{
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.cover-float-island{
+    position: absolute;
+    bottom: 73%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 30px;
+}
+
+.intro{
+
+}
+
+.intro-box{
+    height: 10rem;
+    display: flex;
+}
+
+.intro-image{
+    max-height: 6rem;
+    margin: 2rem;
+}
+
+.intro-large-image {
+    max-height: 10rem;
+}
+
+.intro-text{
+    flex-grow: 10;
+    padding: 1rem;
+}
+
+.intro-title {
+    font-weight: bold;
+    font-size: large;
+}

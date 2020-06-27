@@ -1,24 +1,18 @@
-# lighting-minecraft
+# lighting minecraft
+灵动mc服务器
 
-## Project setup
-```
-yarn install
-```
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+# 简介
+灵动mc服务器是由我们创建的一个mc社区，目前社区内有两台游戏服务器和两个世界，有一些常驻的玩家。
+社区以交流minecraft为主，打造一个很好的游戏生态和自由开放的游戏环境。
+生存采用op自主开发的spigot插件，增加了一些功能，但同时也可以体会到原版生存的乐趣。
+服务器建立在1.15.1版本上，原版纯净生存，欢迎大家一起加入游玩。
 
-### Compiles and minifies for production
-```
-yarn build
-```
+# 项目
+本项目是灵动mc服务器的主页。灵动mc服务器包含很多开源的周边软件，这次是主页的2.0重制版，使用vue开发，
+计划支持公告、登录、注册、邀请、聊天、图片墙、用户反馈等等功能。与项目相对的后端打算采用nodejs开发，
+本项目全栈采用javascript。
 
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# 设计
+嘛，呐呐，啊诺，……风格不明显应该是二次元吗？什么？你说你不喜欢？
+诶嘿嘿嘿，果咩内，悪いですね…仕方ないわね，忍一忍吧。
