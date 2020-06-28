@@ -13,3 +13,12 @@
 .sort-text{
     text-align: center;
 }
+
+.container {
+    margin: 1rem;
+}
+
+.announcement-list{
+    max-width: 50rem;
+    margin: auto;
+}

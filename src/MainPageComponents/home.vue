@@ -4,7 +4,7 @@
             <img src="../assets/cover2.jpg" class="cover-image" alt="封面"/>
             <div class="cover-float-island">
                 <div>来吧，创造无限可能</div>
-                <div style="position: relative;left: 2.8em;top: 0.9em">灵动mc</div>
+                <div id="ldmc" style="position: relative;left: 2.8em;top: 0.9em">灵动mc</div>
             </div>
         </div>
         <div class="intro">

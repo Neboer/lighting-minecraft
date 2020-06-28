@@ -3,28 +3,56 @@
         <el-header>
             <div class="toolbar-top">
                 <div class="bandage">灵动Minecraft</div>
-                <router-link tag="div" to="/" class="toolbar-element" active-class="toolbar-element-active" exact>主页</router-link>
-                <router-link tag="div" to="/announcement" class="toolbar-element" active-class="toolbar-element-active">
-                    公告板
-                </router-link>
-                <router-link tag="div" to="/players" class="toolbar-element" active-class="toolbar-element-active">玩家
-                </router-link>
-                <div class="right-aligned">
-                    <div class="toolbar-element">登录</div>
+                <div class="right-aligned" v-if="!is_logined">
+                    <div class="toolbar-element" @click="login_form_visibility = true">登录</div>
                     <div class="toolbar-element">注册</div>
+                </div>
+
+                <div class="right-aligned" v-if="is_logined">
+                    <div class="toolbar-element">{{login_user}}</div>
+                </div>
+                <div class="toolbar-all-menu">
+                    <router-link tag="div" to="/" class="toolbar-element" active-class="toolbar-element-active" exact>主页
+                    </router-link>
+                    <router-link tag="div" to="/announcement" class="toolbar-element" active-class="toolbar-element-active">
+                        公告
+                    </router-link>
+                    <router-link tag="div" to="/game" class="toolbar-element" active-class="toolbar-element-active">
+                        游戏
+                    </router-link>
+                    <router-link tag="div" to="/support" class="toolbar-element" active-class="toolbar-element-active">
+                        关于
+                    </router-link>
+                    <router-link tag="div" to="/player" class="toolbar-element" active-class="toolbar-element-active"
+                                 v-if="is_logined">个人中心
+                    </router-link>
                 </div>
             </div>
         </el-header>
         <router-view></router-view>
+        <login :visible="login_form_visibility" v-on:close="close_form" v-on:login="login"></login>
     </el-container>
 </template>
 
 <script>
-    // import home from "./MainPageComponents/home"
-    // import announcement from "./MainPageComponents/announcement";
+    import login from './MainPageComponents/home-login'
 
     export default {
         name: "MainPage",
+        components: {login},
+        data() {
+            return {is_logined: false, login_form_visibility: false, login_user: ''}
+        },
+        methods: {
+            close_form() {
+                this.login_form_visibility = false
+            },
+
+            login(username) {
+                this.login_user = username;
+                this.is_logined = true;
+            }
+        }
     }
 </script>
 
