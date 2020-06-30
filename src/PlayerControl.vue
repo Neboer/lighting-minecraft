@@ -1,34 +1,49 @@
 <template>
     <el-container class="container">
-        <el-aside class="aside-menu">
-            <el-menu
-                    default-active="1"
-                    class="el-menu-vertical-demo"
-                    :collapse="false"
-                    :router="true"
-            >
-                <el-menu-item index="1" route="/player/baseinfo">
-                    <i class="el-icon-info"></i>
-                    <span>基本信息</span>
-                </el-menu-item>
-                <el-menu-item index="2" route="/player/gameinfo">
-                    <img src="./assets/minecraftaxe.svg" style="max-width: 18px; margin-right: 10px; margin-left: 5px">
-                    <span>游戏信息</span>
-                </el-menu-item>
-                <el-menu-item index="3">
-                    <i class="el-icon-document"></i>
-                    <span>登录记录</span>
-                </el-menu-item>
-                <el-menu-item index="4">
-                    <i class="el-icon-user"></i>
-                    <span>邀请</span>
-                </el-menu-item>
-                <el-menu-item index="5">
-                    <i class="el-icon-medal"></i>
-                    <span>成就</span>
-                </el-menu-item>
-            </el-menu>
-        </el-aside>
+        <sidebar-menu :menu="[
+                    {
+                        href: '/player/baseinfo',
+                        title: '基本信息',
+                        icon:{
+                            element: 'i',
+                            class: 'el-icon-info'
+                        }
+                    },
+                    {
+                        href: '/player/gameinfo',
+                        title: '游戏信息',
+                        icon: {
+                            element: 'img',
+                            class: 'icon',
+                            attributes: {src: an_ic}
+                        },
+                        child :[
+                            {href:'/player/gameinfo/status', title:'游戏状态',icon:{element:'i',class:'el-icon-s-claim'}},
+                            {href:'/player/gameinfo/home', title:'家',icon:{element:'i',class:'el-icon-s-home'}},
+                            {href:'/player/gameinfo/build',title:'建设',icon:{element:'i',class:'el-icon-coin'}},
+                            {href:'/player/gameinfo/explore',title:'探索',icon:{element:'i',class:'el-icon-discover'}}
+                        ]
+                    },
+                    {
+                        href: '/player/log',
+                        title: '日志',
+                        icon:{
+                            element: 'i',
+                            class: 'el-icon-document'
+                        }
+                    },
+                    {
+                        href: '/player/invite',
+                        title: '邀请',
+                        icon:{
+                            element: 'i',
+                            class: 'el-icon-user'
+                        }
+                    }
+                ]" :relative="true" theme="white-theme" @toggle-collapse="onToggleCollapse">
+            <i slot="toggle-icon" :class="toggle_class"></i>
+            <i slot="dropdown-icon" class="el-icon-caret-right"></i>
+        </sidebar-menu>
         <el-main>
             <router-view></router-view>
         </el-main>
@@ -37,17 +52,44 @@
 
 <script>
     export default {
-        name: "User"
+        name: "User",
+        data() {
+            return {
+                fold: false,
+                an_ic: require('./assets/minecraftaxe.svg'),
+                toggle_class: 'el-icon-s-fold'
+            }
+        },
+        methods: {
+            onToggleCollapse() {
+                if (this.toggle_class === "el-icon-s-unfold") {
+                    this.toggle_class = 'el-icon-s-fold';
+                } else {
+                    this.toggle_class = 'el-icon-s-unfold'
+                }
+            }
+        }
     }
 </script>
 
-<style scoped>
-    .container {
-        margin: 1.5rem;
+<style>
+    @scope true {
+        .container {
+            margin: 0;
+        }
     }
+
+    .icon {
+        background-color: unset !important;
+    }
+
     @media (max-width: 800px) {
         .container {
-            margin: 1.5rem 0;
+            margin: 0;
+        }
+
+        .aside-menu {
+            max-width: 8em;
         }
     }
 </style>

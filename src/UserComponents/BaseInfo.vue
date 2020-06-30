@@ -5,16 +5,16 @@
             <tr>
                 <td>头像</td>
                 <td><div class="block"><el-avatar :size="50" src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png"></el-avatar></div></td>
-                <td><el-button type="primary" icon="el-icon-edit"></el-button></td>
-            </tr>
-            <tr>
-                <td>昵称</td>
-                <td>好人</td>
-                <td><el-button type="primary" icon="el-icon-edit"></el-button></td>
+                <td><el-button type="plain" icon="el-icon-edit"></el-button></td>
             </tr>
             <tr>
                 <td>游戏名</td>
                 <td>Neboer</td>
+                <td><el-button type="plain" icon="el-icon-edit"></el-button></td>
+            </tr>
+            <tr>
+                <td>密码</td>
+                <td><el-button type="plain" icon="el-icon-edit">修改密码</el-button></td>
             </tr>
             <tr>
                 <td>手机</td>

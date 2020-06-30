@@ -2,35 +2,40 @@
     <div class="container-box">
         <div style="flex: 10;">
             <div class="announcement-list">
-                <el-button-group>
-                    <el-button type="plain">系统通知</el-button>
-                    <el-button type="plain">玩家公告</el-button>
-                </el-button-group>
+                <el-tabs v-model="display_mod" type="card">
+                    <el-tab-pane label="系统通知" name="system"></el-tab-pane>
+                    <el-tab-pane label="玩家公告" name="player"></el-tab-pane>
+                </el-tabs>
                 <card></card>
                 <card></card>
+                <el-pagination
+                        layout="prev, pager, next"
+                        :total="50">
+                </el-pagination>
             </div>
         </div>
         <div style="flex: 2" class="side-bar">
-            <el-date-picker
-                    v-model="value"
-                    type="daterange"
-                    range-separator="至"
-                    start-placeholder="开始日期"
-                    end-placeholder="结束日期">
-            </el-date-picker>
+            <div class="admin-card">
+                <el-avatar style="vertical-align: middle"></el-avatar>
+                <div style="display: inline-block;margin: 0 0 2rem 1rem">管理圆1</div>
+            </div>
+            <div class="admin-card">
+                <el-avatar style="vertical-align: middle"></el-avatar>
+                <div style="display: inline-block;margin: 0 0 2rem 1rem">管理圆2</div>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
-    import card from './ann-card'
+    import card from './subComponents/ann-card'
 
     export default {
         name: "announcement",
         components: {card},
         data: function () {
             return {
-                value: new Date()
+                display_mod: 'system'
             };
         }
     }

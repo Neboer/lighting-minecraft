@@ -4,7 +4,10 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import MainPage from './MainPage.vue'
 import {router} from './route'
+import VueSidebarMenu from 'vue-sidebar-menu'
+import 'vue-sidebar-menu/dist/vue-sidebar-menu.css'
 
+Vue.use(VueSidebarMenu)
 Vue.config.productionTip = false;
 Vue.use(ElementUI);
 Vue.use(VueRouter);

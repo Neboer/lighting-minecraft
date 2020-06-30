@@ -1,7 +1,7 @@
 .ann-card {
     /*width: 20rem;*/
     border: black 1px solid;
-    border-radius: 1rem;
+    /*border-radius: 1rem;*/
     padding: 1rem;
     margin: 1rem;
 }
@@ -21,4 +21,11 @@
 .announcement-list{
     max-width: 50rem;
     margin: auto;
+}
+
+@media (max-width: 800px) {
+    .admin-card {
+        display: inline-block;
+        margin-left: 1rem;
+    }
 }

@@ -1,5 +1,5 @@
 <template>
-    <el-main>
+    <div>
         <div class="cover-image-container">
             <img src="../assets/cover2.jpg" class="cover-image" alt="封面"/>
             <div class="cover-float-island">
@@ -40,7 +40,7 @@
                 <img src="../assets/Minecraft.jpg" alt="spigot" class="intro-large-image intro-image-left"/>
             </div>
         </div>
-    </el-main>
+    </div>
 </template>
 
 <script>

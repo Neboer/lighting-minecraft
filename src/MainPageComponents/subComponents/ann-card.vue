@@ -16,5 +16,5 @@
 </script>
 
 <style scoped>
-    @import "../style/announcement.css";
+    @import "../../style/announcement.css";
 </style>
