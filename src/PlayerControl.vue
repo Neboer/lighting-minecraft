@@ -10,7 +10,6 @@
                         }
                     },
                     {
-                        href: '/player/gameinfo',
                         title: '游戏信息',
                         icon: {
                             element: 'img',

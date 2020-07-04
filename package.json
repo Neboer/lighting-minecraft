@@ -11,10 +11,12 @@
     "core-js": "^3.6.5",
     "element": "^0.1.4",
     "element-ui": "^2.13.2",
+    "v-img": "^0.2.0",
     "vue": "^2.6.11",
     "vue-carousel": "^0.18.0",
     "vue-router": "^3.3.4",
-    "vue-sidebar-menu": "^4.6.0"
+    "vue-sidebar-menu": "^4.6.0",
+    "vue-waterfall-easy": "^2.4.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",
