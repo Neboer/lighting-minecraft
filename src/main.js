@@ -7,7 +7,10 @@ import {router} from './route'
 import VueSidebarMenu from 'vue-sidebar-menu'
 import 'vue-sidebar-menu/dist/vue-sidebar-menu.css'
 import VueImg from 'v-img';
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 
+Vue.use(VueAxios, axios);
 Vue.use(VueImg);
 Vue.use(VueSidebarMenu)
 Vue.config.productionTip = false;

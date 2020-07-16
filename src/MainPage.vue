@@ -34,7 +34,7 @@
         <el-main>
             <router-view></router-view>
         </el-main>
-        <login :visible="login_form_visibility" v-on:close="close_form" v-on:login="login"></login>
+        <login :visible="login_form_visibility" v-on:close="close_form" v-on:login_successful="login_successful"></login>
     </el-container>
 </template>
 
@@ -52,7 +52,7 @@
                 this.login_form_visibility = false
             },
 
-            login(username) {
+            login_successful(username) {
                 this.login_user = username;
                 this.is_logined = true;
             }
